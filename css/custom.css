@@ -1,0 +1,131 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Cambria", serif;
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+h1 {font-size: 3.6rem;}
+h2 {font-size: 2.8rem;}
+h3 {font-size: 2.4rem;}
+h4 {font-size: 2rem;}
+h5 {font-size: 1.8rem;}
+h6 {font-size: 1.6rem;}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Cambria", serif;
+}
+
+img {
+    width:100%;
+    height:auto;
+}
+svg {
+    height: 100%;
+    width: 100%;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+/*--
+Document Styles --*/
+nav, footer {
+    background-color: #C98986;
+    color: #ecbedc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+footer {
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+}
+
+nav div {
+    display: flex;
+}
+.logo {
+    align-items: center;
+    gap: 2rem;
+}
+.logo h1 {
+    padding-top: 10px;
+}
+.links {
+    gap: 4rem;
+}
+nav img {
+    height: 6rem;
+    width: min-content;
+}
+main {
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem;
+}
+section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.odd {
+    grid-template-columns: 8fr 4fr;
+}
+section.even {
+    grid-template-columns: 4fr 8fr;
+}
+div.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #823b42; 
+}
+.home-link {
+    font-size: 2.0rem;
+    font-weight: bold;
+}
+.poster {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.poster img {
+    display: block;
+    margin: 1rem auto;
+}
+.poster img[src="img/endo1.jpeg"] {
+    max-width: 70%; 
+    height: auto;
+    display: block;
+    margin: auto;
+}
+.poster img[src="img/symptoms1.jpg"] {
+    max-width: 40%; 
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 80%;
+        padding: 1rem;
+        justify-content: space-around;
+    }
+    
+    section.even, section.odd {
+        grid-template-columns: 1fr;
+    }
+    section.odd div.poster {
+        order: 3;
+    }
+    .poster img {
+        max-width: 50%; 
+    }
+}
